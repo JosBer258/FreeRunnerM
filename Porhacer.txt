@@ -1,0 +1,20 @@
+Menu principal
+*************
+crear escena
+
+esteblecer como escena principal
+
+agregar botones de jugar, creditos, salir
+
+programar boton de jugar para pasar a la escena de juego
+
+programar a creditos para mostrar video
+
+programar boton salir para cerar la aplicacion
+
+agregar "css"
+
+
+
+***
+ajustar para que la pantalla no pueda quedar en vertical solo en horizontal.
