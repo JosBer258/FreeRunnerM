@@ -51,6 +51,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\C_Credito.cs" />
+     <Compile Include="Assets\C_Fondo.cs" />
+     <Compile Include="Assets\C_Misiones.cs" />
      <Compile Include="Assets\Scripts\C_LevelManager.cs" />
      <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\EnemyGeneratorController.cs" />

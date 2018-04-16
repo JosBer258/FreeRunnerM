@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 	private Animator animator;
@@ -9,10 +9,17 @@ public class PlayerController : MonoBehaviour {
 	public GameObject enemy;
     public AudioClip jumpClip;
     public AudioClip pointClip;
+    public AudioClip hitEnemy;
     public AudioClip DieClip;
     private AudioSource audioPlayer;
     private float startY;
 
+
+    public GameObject Corazon_1;
+    public GameObject Corazon_2;
+    public GameObject Corazon_3;
+
+    private int Lives=3;
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator>();
@@ -47,13 +54,21 @@ public class PlayerController : MonoBehaviour {
 	
 	if(other.gameObject.tag == "Enemy"){
 
-			UpdateState("PlayerDeath");
-			game.GetComponent<GameController>().gameState = GameState.End;
-			enemy.SendMessage ("CancelGenerator", true);
-            game.SendMessage("ResetTimeScale");
-            game.GetComponent<AudioSource>().Stop();
-            audioPlayer.clip = DieClip;
-            audioPlayer.Play();
+            Lives = Lives - 1;
+            Fun_ReducirCoraz(Lives);
+            if (Lives > 0)
+            {
+                Debug.Log("vive");
+                audioPlayer.clip = hitEnemy;
+                audioPlayer.Play();
+            }
+            else
+            {
+                Debug.Log("Muere");
+                Fun_Morir();
+                
+
+            }
         }
         else 
    if(other.gameObject.tag == "Point")
@@ -68,4 +83,36 @@ public class PlayerController : MonoBehaviour {
 	public void GetReady(){
 		game.GetComponent<GameController>().gameState = GameState.Ready;
 	}
+
+    public void Fun_Morir()
+    {
+        UpdateState("PlayerDeath");
+        game.GetComponent<GameController>().gameState = GameState.End;
+        enemy.SendMessage("CancelGenerator", true);
+        game.SendMessage("ResetTimeScale");
+        game.GetComponent<AudioSource>().Stop();
+        audioPlayer.clip = DieClip;
+        audioPlayer.Play();
+        SceneManager.LoadScene("Misiones");
+    }
+
+
+
+    private void Fun_ReducirCoraz(int Vida)
+    {
+        if (Vida == 2)
+        {
+            Corazon_1.SetActive(false);
+        }
+        else
+            if (Vida == 1)
+        {
+            Corazon_2.SetActive(false);
+        }
+        else
+            if (Vida == 0)
+        {
+            Corazon_3.SetActive(false);
+        }
+    }
 }
