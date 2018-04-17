@@ -10,12 +10,13 @@ public class EnemyController : MonoBehaviour {
     // Use this for initialization
     void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
+        
 		rb2d.velocity = Vector2.left * velocity;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+  
 	}
 
 	void OnTriggerEnter2D(Collider2D other){

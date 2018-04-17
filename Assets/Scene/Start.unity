@@ -242,7 +242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 25.5, y: 105}
+  m_AnchoredPosition: {x: 25.5, y: 81.9}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &273887098
@@ -347,7 +347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 70, y: 105}
+  m_AnchoredPosition: {x: 70, y: 81.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &377118825
@@ -883,7 +883,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1415850603}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.97, y: -3.37, z: -1}
+  m_LocalPosition: {x: -3.33, y: -3.37, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1044037322}
@@ -946,7 +946,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 1.79, y: 1.85}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -986,10 +986,10 @@ BoxCollider2D:
   m_Offset: {x: 0.056268692, y: 0.67027426}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.79, y: 1.85}
+    newSize: {x: 1.79, y: 1.85}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -1217,6 +1217,7 @@ MonoBehaviour:
   generatorTimer: 1.75
   enemyPrefab: {fileID: 1238834053797748, guid: 493a10d84c9d5044a965a3451fae99c9,
     type: 2}
+  enemyEspin: {fileID: 1670609497364446, guid: f96a56eb93abb3b409f80f8d25566d74, type: 2}
 --- !u!4 &1725018271
 Transform:
   m_ObjectHideFlags: 0
@@ -1224,7 +1225,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1725018269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.94, y: -2.78, z: 0}
+  m_LocalPosition: {x: 8.94, y: -2.91, z: -0.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1469,13 +1470,13 @@ Prefab:
     - target: {fileID: 224799512930572068, guid: ea5977d53e75892479937f7e8ee91001,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -327.4
+      value: -170.73
       objectReference: {fileID: 0}
     - target: {fileID: 114552857387191310, guid: ea5977d53e75892479937f7e8ee91001,
         type: 2}
       propertyPath: m_Texture
       value: 
-      objectReference: {fileID: 2800000, guid: 35fd0f3b7d169734e9c2cd980c1bfb05, type: 3}
+      objectReference: {fileID: 2800000, guid: 285cf5acd14e45042a8e29cb75392d08, type: 3}
     - target: {fileID: 224799512930572068, guid: ea5977d53e75892479937f7e8ee91001,
         type: 2}
       propertyPath: m_SizeDelta.x
@@ -1484,7 +1485,7 @@ Prefab:
     - target: {fileID: 224799512930572068, guid: ea5977d53e75892479937f7e8ee91001,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 65.5
+      value: 378.83
       objectReference: {fileID: 0}
     - target: {fileID: 1723531071673972, guid: ea5977d53e75892479937f7e8ee91001, type: 2}
       propertyPath: m_IsActive
@@ -1510,6 +1511,11 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: 51
       objectReference: {fileID: 0}
+    - target: {fileID: 114329389859721878, guid: ea5977d53e75892479937f7e8ee91001,
+        type: 2}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 584d76a3079149247b72d19de8f8d3e1, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea5977d53e75892479937f7e8ee91001, type: 2}
   m_IsPrefabParent: 0
@@ -1623,7 +1629,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 48, y: 105}
+  m_AnchoredPosition: {x: 48, y: 81.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2070170050

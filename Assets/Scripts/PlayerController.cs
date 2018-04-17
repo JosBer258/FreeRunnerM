@@ -76,9 +76,41 @@ public class PlayerController : MonoBehaviour {
             audioPlayer.clip = pointClip;
             audioPlayer.Play();
             game.SendMessage("IncreasePoints");
-   }
+            Debug.Log("sdfghjhjhgvghjhgvbhu");
+        }
+        else 
+   if (other.gameObject.tag == "MuerteEnemigo")
+        {
+            game.SendMessage("IncreasePoints");
+            game.SendMessage("IncreasePoints");
+            Destroy(other);
+            if (Lives < 4)
+            {
+                Lives = Lives + 1;
+            }
+            audioPlayer.clip = pointClip;
+            audioPlayer.Play();
+        }
+        else if(other.gameObject.tag == "Espina"){
 
-	}
+            Lives = Lives - 1;
+            Fun_ReducirCoraz(Lives);
+            if (Lives > 0)
+            {
+                Debug.Log("vive");
+                audioPlayer.clip = hitEnemy;
+                audioPlayer.Play();
+            }
+            else
+            {
+                Debug.Log("Muere");
+                Fun_Morir();
+
+
+            }
+        }
+
+    }
 
 	public void GetReady(){
 		game.GetComponent<GameController>().gameState = GameState.Ready;
@@ -86,6 +118,7 @@ public class PlayerController : MonoBehaviour {
 
     public void Fun_Morir()
     {
+        
         UpdateState("PlayerDeath");
         game.GetComponent<GameController>().gameState = GameState.End;
         enemy.SendMessage("CancelGenerator", true);
@@ -100,19 +133,34 @@ public class PlayerController : MonoBehaviour {
 
     private void Fun_ReducirCoraz(int Vida)
     {
+        if (Vida == 3)
+        {
+            Corazon_1.SetActive(true);
+            Corazon_2.SetActive(true);
+            Corazon_3.SetActive(true);
+        }
+        else
         if (Vida == 2)
         {
             Corazon_1.SetActive(false);
+            Corazon_2.SetActive(true);
+            Corazon_3.SetActive(true);
         }
         else
             if (Vida == 1)
         {
+            Corazon_1.SetActive(false);
             Corazon_2.SetActive(false);
+            Corazon_3.SetActive(true);
         }
         else
             if (Vida == 0)
         {
+            Corazon_1.SetActive(false);
+            Corazon_2.SetActive(false);
             Corazon_3.SetActive(false);
         }
     }
+
+    
 }

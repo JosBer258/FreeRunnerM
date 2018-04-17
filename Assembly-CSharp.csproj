@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1F213A0A-CE52-E0F7-9C27-04598A978F95}</ProjectGuid>
+    <ProjectGuid>{5D9B8D83-39DC-7CC7-617C-70FE9215CDA4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -54,6 +54,7 @@
      <Compile Include="Assets\C_Credito.cs" />
      <Compile Include="Assets\C_Fondo.cs" />
      <Compile Include="Assets\C_Misiones.cs" />
+     <Compile Include="Assets\EspinaControl.cs" />
      <Compile Include="Assets\Scripts\C_LevelManager.cs" />
      <Compile Include="Assets\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Scripts\EnemyGeneratorController.cs" />
@@ -61,7 +62,7 @@
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <None Include="Assets\Audio\License.txt" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>C:/Users/Josias/Documents/Unity Projectos/FreeRun/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>C:/Users/Josias/Documents/Proyectos GitHub/FreeRunnerM/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>

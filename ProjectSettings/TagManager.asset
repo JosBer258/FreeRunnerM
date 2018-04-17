@@ -7,6 +7,8 @@ TagManager:
   - Destroyer
   - Enemy
   - Point
+  - MuerteEnemigo
+  - Espina
   layers:
   - Default
   - TransparentFX
