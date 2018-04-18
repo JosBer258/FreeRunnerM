@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public enum GameState{Idle, Playing, End, Ready};
 public class GameController : MonoBehaviour {
@@ -21,8 +22,8 @@ public class GameController : MonoBehaviour {
 	public GameObject enemyGenerator;
     private AudioSource musicPlayer;
     private int points;
-    public float scaleTime = 6f;
-    public float scaleInc = .25f;
+    public float scaleTime = 30f;
+    public float scaleInc=1;
     // Use this for initialization
     void Start() {
         musicPlayer = GetComponent<AudioSource>();
@@ -41,6 +42,7 @@ public class GameController : MonoBehaviour {
 
 			enemyGenerator.SendMessage ("StartGenerator");
             musicPlayer.Play();
+            
             InvokeRepeating("GameTimeScale",scaleTime, scaleTime);
 		} else if (gameState == GameState.Playing) 
 		{
@@ -69,7 +71,7 @@ public class GameController : MonoBehaviour {
 
     public void GameTimeScale()
     {
-        Time.timeScale += scaleInc;
+        Time.timeScale += (scaleInc /2);
         Debug.Log("Aumento" +  Time.timeScale.ToString());
     }
 

@@ -6,12 +6,13 @@ public class EnemyGeneratorController : MonoBehaviour {
 
 	public float generatorTimer = 5.75f;
 	public GameObject enemyPrefab;
-	private float time = 4.75f;
+    public GameObject enemyEspin;
+    private float time = 8.75f;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+ 
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -20,8 +21,9 @@ public class EnemyGeneratorController : MonoBehaviour {
 
 	void CreateEnemy(){
 		Instantiate (enemyPrefab, transform.position, Quaternion.identity);
-	
-	}
+        Instantiate(enemyEspin, transform.position, Quaternion.identity);
+
+    }
 
 	public void StartGenerator(){
 		InvokeRepeating ("CreateEnemy",0f, time);
